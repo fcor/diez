@@ -1,13 +1,7 @@
-```
-██████  ██ ██████ ███████
-███████ ██ ██████ ███████
-██   ██ ██ ██         ███
-██   ██ ██ █████    ███
-██   ██ ██ ██     ███
-███████ ██ ██████ ███████
-██████  ██ ██████ ███████
-   colors → code → art
-```
+<p align="center">
+  <img src="./public/logo.svg" alt="DIEZ" width="320" />
+</p>
+<p align="center"><em>colors → code → art</em></p>
 
 # Diez
 
