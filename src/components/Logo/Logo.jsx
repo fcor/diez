@@ -12,10 +12,12 @@ const GRID_H = 7
 */
 const LAYERS = [
   // D — four bars forming the letter
+  // Top/bottom are 5 wide (notched corners) so the silhouette reads as D, not O.
+  // Right bar drawn last so it overlaps both notches symmetrically.
   { x: 0,  y: 0, w: 2, h: 7, ci: 0 },   // left spine
-  { x: 1,  y: 0, w: 6, h: 2, ci: 1 },   // top bar
+  { x: 1,  y: 0, w: 5, h: 2, ci: 1 },   // top bar
+  { x: 1,  y: 5, w: 5, h: 2, ci: 3 },   // bottom bar
   { x: 5,  y: 1, w: 2, h: 5, ci: 2 },   // right bar
-  { x: 1,  y: 5, w: 6, h: 2, ci: 3 },   // bottom bar
 
   // I
   { x: 8,  y: 0, w: 2, h: 7, ci: 4 },
