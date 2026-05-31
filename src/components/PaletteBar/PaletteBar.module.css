@@ -7,6 +7,8 @@
   gap: 8px;
   height: 100%;
   min-height: 3lh;
+  width: 100%;
+  min-width: 0;
 }
 
 .swatch {
@@ -30,4 +32,10 @@
   font-size: var(--font-size);
   font-weight: bold;
   user-select: all;
+}
+
+@media (max-width: 720px) {
+  .swatch {
+    padding: 0;
+  }
 }

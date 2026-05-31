@@ -7,6 +7,7 @@ import ColorInput from './components/ColorInput/ColorInput'
 import Logo from './components/Logo/Logo'
 import Canvas from './components/Canvas/Canvas'
 import CanvasControls from './components/Canvas/CanvasControls'
+import MobileShuffle from './components/Canvas/MobileShuffle'
 import Export from './components/Export/Export'
 import { PaletteProvider } from './context/PaletteContext'
 
@@ -39,7 +40,10 @@ function App() {
           <Panel title="Controls" className={styles.controlsPanel}>
             <div className={styles.controlsRow}>
               <CanvasControls algo={algo} setAlgo={setAlgo} speed={speed} setSpeed={setSpeed} />
-              <Export />
+              <div className={styles.actions}>
+                <MobileShuffle />
+                <Export />
+              </div>
             </div>
           </Panel>
         </section>

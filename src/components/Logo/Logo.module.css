@@ -19,3 +19,9 @@
 .dim {
   color: var(--fg-muted);
 }
+
+@media (max-width: 720px) {
+  .logo {
+    font-size: 10px;
+  }
+}

@@ -219,7 +219,7 @@ export const ALGORITHMS = {
     },
     update(state, cols, rows, dt) {
       state.elapsed += dt
-      if (state.elapsed > 5 || cols !== state.cols || rows !== state.rows) {
+      if (state.elapsed > 1 || cols !== state.cols || rows !== state.rows) {
         return ALGORITHMS.grid.init(cols, rows)
       }
       return state

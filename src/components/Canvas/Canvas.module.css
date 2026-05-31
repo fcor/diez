@@ -7,11 +7,15 @@
   flex-direction: column;
   height: 100%;
   min-height: 0;
+  min-width: 0;
+  width: 100%;
 }
 
 .canvas {
   flex: 1;
   min-height: 0;
+  min-width: 0;
+  width: 100%;
   overflow: hidden;
   font-family: var(--font-mono);
   font-size: var(--font-size);
@@ -55,4 +59,50 @@
 
 .active {
   color: var(--accent);
+}
+
+.mobileShuffle {
+  display: none;
+}
+
+@media (max-width: 720px) {
+  .controls {
+    flex-direction: column;
+    gap: var(--space-1);
+  }
+
+  .controls > .field:nth-child(2) {
+    display: none;
+  }
+
+  .field {
+    display: grid;
+    grid-template-columns: auto 1fr 1fr;
+    column-gap: var(--space-2);
+    row-gap: 4px;
+    min-width: 0;
+  }
+
+  .field .label {
+    grid-row: span 2;
+    align-self: center;
+  }
+
+  .mobileShuffle {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: var(--font-size);
+    font-weight: bold;
+    background: none;
+    border: none;
+    color: var(--fg-primary);
+    cursor: pointer;
+    padding: 0;
+    letter-spacing: 0.05em;
+  }
+
+  .mobileShuffle:hover,
+  .mobileShuffle:active {
+    color: var(--accent);
+  }
 }

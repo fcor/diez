@@ -6,7 +6,7 @@
   height: 100%;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 1fr);
   gap: 4px;
   padding: 1ch;
   overflow: hidden;
@@ -44,7 +44,7 @@
 
 .main {
   display: grid;
-  grid-template-columns: 32ch 1fr;
+  grid-template-columns: 32ch minmax(0, 1fr);
   gap: 4px;
   min-height: 0;
   overflow: hidden;
@@ -82,8 +82,42 @@
   align-items: baseline;
 }
 
+.actions {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-3);
+  margin-left: auto;
+}
+
 /* ── Bottom Bar ─────────────────────────────────────────────── */
 
 .bar {
   /* bar panel doesn't need to grow */
+}
+
+/* ── Mobile (≤720px) ────────────────────────────────────────── */
+
+@media (max-width: 720px) {
+  .main {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .controlsRow {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-2);
+  }
+
+  .actions {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-2);
+    margin-left: 0;
+    width: 100%;
+    min-width: 0;
+  }
 }

@@ -128,3 +128,18 @@
   tab-size: 2;
   padding: 2ch 0;
 }
+
+/* ── Mobile (≤720px) ────────────────────────────────────────── */
+
+@media (max-width: 720px) {
+  .wrapper {
+    margin-left: 0;
+  }
+
+  .drawer {
+    width: calc(100vw - 2ch) !important;
+    right: 1ch !important;
+    left: auto;
+    max-height: 50vh;
+  }
+}
