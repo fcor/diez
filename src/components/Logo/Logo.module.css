@@ -1,27 +1,18 @@
 /* ── Logo ─────────────────────────────────────────────────────
-   Solid colored blocks forming "DIEZ".
-   Compact size, tight line-height so blocks touch.
+   Inline SVG — pixel-perfect across browsers/fonts.
+   Geometry encoded in LAYERS array; sizing controlled here.
    ──────────────────────────────────────────────────────────── */
 
 .logo {
-  font-family: var(--font-mono);
-  font-size: 14px;
-  line-height: 1.1;
-  margin: 0;
+  display: block;
+  width: 260px;
+  height: auto;
   user-select: none;
   flex-shrink: 0;
 }
 
-.row {
-  display: block;
-}
-
-.dim {
-  color: var(--fg-muted);
-}
-
 @media (max-width: 720px) {
   .logo {
-    font-size: 10px;
+    width: 150px;
   }
 }
