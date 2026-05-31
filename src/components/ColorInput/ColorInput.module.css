@@ -1,0 +1,107 @@
+/* ── ColorInput ───────────────────────────────────────────────
+   TUI-style prompt for adding a hex color.
+   ──────────────────────────────────────────────────────────── */
+
+.form {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-1);
+  padding-top: var(--vspace-1);
+  border-top: 1px solid var(--fg-muted);
+  margin-top: var(--vspace-1);
+}
+
+.prompt {
+  color: var(--accent);
+  user-select: none;
+}
+
+.input {
+  font-family: var(--font-mono);
+  font-size: var(--font-size);
+  background: none;
+  border: none;
+  color: var(--fg-primary);
+  width: 8ch;
+  padding: 0;
+  outline: none;
+  border-bottom: 1px solid var(--fg-muted);
+}
+
+.input:focus {
+  border-bottom-color: var(--accent);
+}
+
+.input::placeholder {
+  color: var(--fg-muted);
+}
+
+.button {
+  font-family: var(--font-mono);
+  font-size: var(--font-size);
+  background: none;
+  border: none;
+  color: var(--fg-secondary);
+  cursor: pointer;
+  padding: 0;
+}
+
+.button:hover {
+  color: var(--accent);
+}
+
+/* ── Shuffle + Harmony ───────────────────────────────────── */
+
+.shuffle {
+  padding-top: var(--vspace-1);
+  border-top: 1px solid var(--fg-muted);
+  margin-top: var(--vspace-1);
+}
+
+.rules {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: var(--vspace-1);
+}
+
+.rule {
+  font-family: var(--font-mono);
+  font-size: var(--font-size);
+  background: none;
+  border: none;
+  color: var(--fg-secondary);
+  cursor: pointer;
+  padding: 0;
+  text-align: left;
+}
+
+.rule:hover {
+  color: var(--fg-primary);
+}
+
+.ruleActive {
+  color: var(--accent);
+}
+
+.harmonyLabel {
+  color: var(--fg-secondary);
+  user-select: none;
+}
+
+.shuffleBtn {
+  font-family: var(--font-mono);
+  font-size: var(--font-size);
+  background: none;
+  border: none;
+  color: var(--fg-primary);
+  cursor: pointer;
+  padding: 4px 0;
+  margin-top: var(--vspace-1);
+  letter-spacing: 0.05em;
+  font-weight: bold;
+}
+
+.shuffleBtn:hover {
+  color: var(--accent);
+}

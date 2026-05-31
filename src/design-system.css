@@ -1,0 +1,106 @@
+/* ============================================================
+   Diez — Design System Tokens
+   "Colors -> Code -> Art"
+
+   ASCII-first terminal aesthetic.
+   All spacing derived from the character cell.
+   Only palette colors appear on screen — chrome is neutral.
+   ============================================================ */
+
+:root {
+  /* ── Font ─────────────────────────────────────────────────── */
+  --font-mono: "Bakemono mono", "Menlo", "Consolas", monospace;
+  --font-size: 14px;
+  --line-height: 1.4;
+
+  /* ── Character Cell ─────────────────────────────────────────
+     Base unit for all spacing and layout.
+     1ch = width of one character in the monospace font.
+     1lh = one line height (font-size * line-height).
+     We alias these for clarity.                                */
+  --cell-w: 1ch;
+  --cell-h: calc(var(--font-size) * var(--line-height));
+
+  /* ── Surfaces ─────────────────────────────────────────────── */
+  --bg-primary: #16161e;
+  --bg-secondary: #1a1b26;
+  --bg-elevated: #1f2029;
+
+  /* ── Foreground ───────────────────────────────────────────── */
+  --fg-primary: #c0caf5;       /* bright — active content       */
+  --fg-secondary: #565f89;     /* dim — chrome, borders, labels */
+  --fg-muted: #3b3f52;         /* very dim — decorative lines   */
+
+  /* ── Accent ───────────────────────────────────────────────── */
+  --accent: #7aa2f7;           /* interactive elements           */
+  --accent-dim: #3d59a1;       /* hover, subtle highlights       */
+
+  /* ── Feedback ─────────────────────────────────────────────── */
+  --color-warning: #e0af68;
+  --color-error: #f7768e;
+  --color-success: #9ece6a;
+
+  /* ── Box Drawing ────────────────────────────────────────────
+     Stored as tokens so we can swap Unicode ↔ ASCII.
+     Default: Unicode box-drawing set.                          */
+  --border-tl: "┌";
+  --border-tr: "┐";
+  --border-bl: "└";
+  --border-br: "┘";
+  --border-h: "─";
+  --border-v: "│";
+  --border-cross: "┼";
+  --border-t-down: "┬";
+  --border-t-up: "┴";
+  --border-t-right: "├";
+  --border-t-left: "┤";
+
+  /* ── Block Characters ─────────────────────────────────────── */
+  --block-light: "░";
+  --block-medium: "▒";
+  --block-heavy: "▓";
+  --block-full: "█";
+
+  /* ── Density Ramp ───────────────────────────────────────────
+     Light → Heavy:  .:-=+*#%@                                  */
+  --density-ramp: " .:-=+*#%@";
+
+  /* ── Spacing (character-cell multiples) ───────────────────── */
+  --space-1: 1ch;              /* 1 character width              */
+  --space-2: 2ch;
+  --space-3: 3ch;
+  --space-4: 4ch;
+  --space-8: 8ch;
+
+  --vspace-1: var(--cell-h);   /* 1 line height                  */
+  --vspace-2: calc(var(--cell-h) * 2);
+  --vspace-3: calc(var(--cell-h) * 3);
+
+  /* ── Panel ────────────────────────────────────────────────── */
+  --panel-border-color: var(--fg-secondary);
+  --panel-header-color: var(--fg-primary);
+  --panel-bg: var(--bg-secondary);
+
+  /* ── Interactive ──────────────────────────────────────────── */
+  --button-fg: var(--fg-primary);
+  --button-bracket: var(--fg-secondary);
+  --button-hover-fg: var(--accent);
+  --input-fg: var(--fg-primary);
+  --input-border: var(--fg-secondary);
+  --selection-marker: "*";
+}
+
+/* ── ASCII fallback theme ─────────────────────────────────── */
+[data-borders="ascii"] {
+  --border-tl: "+";
+  --border-tr: "+";
+  --border-bl: "+";
+  --border-br: "+";
+  --border-h: "-";
+  --border-v: "|";
+  --border-cross: "+";
+  --border-t-down: "+";
+  --border-t-up: "+";
+  --border-t-right: "+";
+  --border-t-left: "+";
+}

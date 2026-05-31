@@ -1,0 +1,130 @@
+/* ── Export ───────────────────────────────────────────────────
+   Inline toggle in Controls panel, drawer opens upward.
+   ──────────────────────────────────────────────────────────── */
+
+.wrapper {
+  position: relative;
+  display: inline-block;
+  margin-left: auto;
+}
+
+/* ── Collapsed toggle ────────────────────────────────────── */
+
+.toggle {
+  font-family: var(--font-mono);
+  font-size: var(--font-size);
+  font-weight: bold;
+  background: none;
+  border: none;
+  color: var(--fg-primary);
+  cursor: pointer;
+  padding: 0;
+  letter-spacing: 0.05em;
+}
+
+.toggle:hover {
+  color: var(--accent);
+}
+
+/* ── Expanded drawer ─────────────────────────────────────── */
+
+.drawer {
+  position: fixed;
+  width: 64ch;
+  max-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-elevated);
+  border: 1px solid var(--fg-secondary);
+  padding: 1ch 1ch;
+  z-index: 100;
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  margin-bottom: 4px;
+  flex-shrink: 0;
+}
+
+.title {
+  color: var(--fg-primary);
+  font-weight: bold;
+  letter-spacing: 0.1em;
+}
+
+.copyBtn {
+  font-family: var(--font-mono);
+  font-size: var(--font-size);
+  background: none;
+  border: none;
+  color: var(--fg-secondary);
+  cursor: pointer;
+  padding: 0;
+  margin-left: auto;
+}
+
+.copyBtn:hover {
+  color: var(--accent);
+}
+
+.closeBtn {
+  font-family: var(--font-mono);
+  font-size: var(--font-size);
+  background: none;
+  border: none;
+  color: var(--fg-secondary);
+  cursor: pointer;
+  padding: 0;
+}
+
+.closeBtn:hover {
+  color: var(--color-error);
+}
+
+/* ── Format selector ─────────────────────────────────────── */
+
+.formats {
+  display: flex;
+  gap: var(--space-1);
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--fg-muted);
+  margin-bottom: 4px;
+  flex-shrink: 0;
+}
+
+.option {
+  font-family: var(--font-mono);
+  font-size: var(--font-size);
+  background: none;
+  border: none;
+  color: var(--fg-secondary);
+  cursor: pointer;
+  padding: 0;
+}
+
+.option:hover {
+  color: var(--fg-primary);
+}
+
+.active {
+  color: var(--accent);
+}
+
+/* ── Code output ─────────────────────────────────────────── */
+
+.code {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  color: var(--fg-primary);
+  white-space: pre;
+  tab-size: 2;
+  padding: 2ch 0;
+}

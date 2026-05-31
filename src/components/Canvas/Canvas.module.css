@@ -1,0 +1,58 @@
+/* ── Canvas ───────────────────────────────────────────────────
+   ASCII generative art grid + controls.
+   ──────────────────────────────────────────────────────────── */
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+}
+
+.canvas {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+  font-family: var(--font-mono);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  background: var(--bg-secondary);
+}
+
+/* ── Controls ────────────────────────────────────────────── */
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.field {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-1);
+}
+
+.label {
+  color: var(--fg-secondary);
+  user-select: none;
+}
+
+.option {
+  font-family: var(--font-mono);
+  font-size: var(--font-size);
+  background: none;
+  border: none;
+  color: var(--fg-secondary);
+  cursor: pointer;
+  padding: 0;
+  text-align: left;
+}
+
+.option:hover {
+  color: var(--fg-primary);
+}
+
+.active {
+  color: var(--accent);
+}

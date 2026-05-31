@@ -1,0 +1,65 @@
+/* ── ColorList ────────────────────────────────────────────────
+   Left panel: editable color rows with lock/remove actions.
+   ──────────────────────────────────────────────────────────── */
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: 2px 0;
+}
+
+.swatch {
+  white-space: pre;
+  line-height: 1.1;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.hex {
+  font-family: var(--font-mono);
+  font-size: var(--font-size);
+  background: none;
+  border: none;
+  color: var(--fg-primary);
+  width: 8ch;
+  padding: 0;
+  outline: none;
+  border-bottom: 1px solid transparent;
+}
+
+.hex:focus {
+  border-bottom-color: var(--accent);
+}
+
+.action {
+  font-family: var(--font-mono);
+  font-size: var(--font-size);
+  background: none;
+  border: none;
+  color: var(--fg-secondary);
+  cursor: pointer;
+  padding: 0;
+}
+
+.action:hover {
+  color: var(--fg-primary);
+}
+
+.active {
+  color: var(--accent);
+}
+
+.active:hover {
+  color: var(--accent);
+}
+
+.empty {
+  color: var(--fg-muted);
+}

@@ -1,0 +1,21 @@
+/* ── Logo ─────────────────────────────────────────────────────
+   Solid colored blocks forming "DIEZ".
+   Compact size, tight line-height so blocks touch.
+   ──────────────────────────────────────────────────────────── */
+
+.logo {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  line-height: 1.1;
+  margin: 0;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.row {
+  display: block;
+}
+
+.dim {
+  color: var(--fg-muted);
+}

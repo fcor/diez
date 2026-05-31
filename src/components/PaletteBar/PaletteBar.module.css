@@ -1,0 +1,33 @@
+/* ── PaletteBar ───────────────────────────────────────────────
+   Bottom strip: colored border, dark gap, solid fill + hex.
+   ──────────────────────────────────────────────────────────── */
+
+.bar {
+  display: flex;
+  gap: 8px;
+  height: 100%;
+  min-height: 3lh;
+}
+
+.swatch {
+  flex: 1;
+  display: flex;
+  border: 1px solid;
+  padding: 8px;
+  min-width: 0;
+  background: var(--bg-primary);
+}
+
+.fill {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hex {
+  color: var(--bg-primary);
+  font-size: var(--font-size);
+  font-weight: bold;
+  user-select: all;
+}
