@@ -14,7 +14,7 @@ the Venezuelan kinetic artist who spent his life on color interaction.
 His *Physichromies* are the reason why this project exists.
 
 <p align="center">
-  <img src="./public/diez.gif" alt="Diez in action" width="800" />
+  <img src="./public/diez.gif" alt="Diez in action" width="600" />
 </p>
 
 ## What it does
