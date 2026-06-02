@@ -5,7 +5,7 @@ import styles from './ColorInput.module.css'
 
 const HEX_RE = /^#[0-9a-f]{6}$/i
 
-function ColorInput() {
+function ColorInput({ onOpenAbout }) {
   const dispatch = usePaletteDispatch()
   const [value, setValue] = useState('')
   const [harmony, setHarmony] = useState('triadic')
@@ -67,6 +67,11 @@ function ColorInput() {
         <button className={styles.shuffleBtn} onClick={handleShuffle}>
           [ SHUFFLE ]
         </button>
+        {onOpenAbout && (
+          <button className={styles.aboutBtn} onClick={onOpenAbout}>
+            [ ABOUT ]
+          </button>
+        )}
       </div>
     </>
   )

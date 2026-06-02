@@ -1,0 +1,154 @@
+/* ── About ────────────────────────────────────────────────────
+   Centered modal with dim backdrop. Reuses panel chrome.
+   ──────────────────────────────────────────────────────────── */
+
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  padding: 2ch;
+}
+
+.modal {
+  width: 60ch;
+  max-width: 100%;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-elevated);
+  border: 1px solid var(--fg-secondary);
+  padding: 1ch 1ch;
+  overflow: hidden;
+}
+
+/* ── Header ──────────────────────────────────────────────── */
+
+.header {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  margin-bottom: var(--vspace-1);
+  flex-shrink: 0;
+}
+
+.title {
+  color: var(--fg-primary);
+  font-weight: bold;
+  letter-spacing: 0.1em;
+}
+
+.closeBtn {
+  font-family: var(--font-mono);
+  font-size: var(--font-size);
+  background: none;
+  border: none;
+  color: var(--fg-secondary);
+  cursor: pointer;
+  padding: 0;
+  margin-left: auto;
+}
+
+.closeBtn:hover {
+  color: var(--color-error);
+}
+
+/* ── Body ────────────────────────────────────────────────── */
+
+.body {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  color: var(--fg-primary);
+  line-height: var(--line-height);
+}
+
+.body p {
+  margin: 0 0 var(--vspace-1);
+}
+
+.lead {
+  color: var(--fg-secondary);
+}
+
+.brand {
+  color: var(--fg-primary);
+  font-weight: bold;
+  letter-spacing: 0.1em;
+}
+
+.tagline {
+  color: var(--fg-secondary);
+  letter-spacing: 0.1em;
+}
+
+.body em {
+  color: var(--accent);
+  font-style: normal;
+}
+
+.section {
+  margin-top: var(--vspace-1);
+}
+
+.sectionLabel {
+  display: block;
+  color: var(--fg-secondary);
+  margin-bottom: 4px;
+  letter-spacing: 0.05em;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 2ch;
+  color: var(--fg-primary);
+}
+
+.list li {
+  padding: 0;
+  margin: 0;
+}
+
+.link {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* ── Mobile trigger ([?] in actions row) ─────────────────── */
+
+.triggerMobile {
+  display: none;
+  font-family: var(--font-mono);
+  font-size: var(--font-size);
+  background: none;
+  border: none;
+  color: var(--fg-secondary);
+  cursor: pointer;
+  padding: 0;
+  letter-spacing: 0.05em;
+}
+
+.triggerMobile:hover {
+  color: var(--accent);
+}
+
+/* ── Mobile ──────────────────────────────────────────────── */
+
+@media (max-width: 720px) {
+  .modal {
+    width: 100%;
+    max-height: 90vh;
+  }
+
+  .triggerMobile {
+    display: inline-block;
+  }
+}

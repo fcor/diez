@@ -105,3 +105,20 @@
 .shuffleBtn:hover {
   color: var(--accent);
 }
+
+.aboutBtn {
+  font-family: var(--font-mono);
+  font-size: var(--font-size);
+  background: none;
+  border: none;
+  color: var(--fg-secondary);
+  cursor: pointer;
+  padding: 0;
+  margin-top: 4px;
+  letter-spacing: 0.05em;
+  display: block;
+}
+
+.aboutBtn:hover {
+  color: var(--accent);
+}

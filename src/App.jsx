@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useCallback } from 'react'
 import styles from './App.module.css'
 import Panel from './components/Panel/Panel'
 import PaletteBar from './components/PaletteBar/PaletteBar'
@@ -9,11 +9,16 @@ import Canvas from './components/Canvas/Canvas'
 import CanvasControls from './components/Canvas/CanvasControls'
 import MobileShuffle from './components/Canvas/MobileShuffle'
 import Export from './components/Export/Export'
+import About from './components/About/About'
+import aboutStyles from './components/About/About.module.css'
 import { PaletteProvider } from './context/PaletteContext'
 
 function App() {
   const [algo, setAlgo] = useState('matrix')
   const [speed, setSpeed] = useState(1)
+  const [aboutOpen, setAboutOpen] = useState(false)
+  const openAbout = useCallback(() => setAboutOpen(true), [])
+  const closeAbout = useCallback(() => setAboutOpen(false), [])
 
   return (
     <PaletteProvider>
@@ -29,7 +34,7 @@ function App() {
         <aside className={styles.sidebar}>
           <Panel title="Palette">
             <ColorList />
-            <ColorInput />
+            <ColorInput onOpenAbout={openAbout} />
           </Panel>
         </aside>
 
@@ -43,6 +48,13 @@ function App() {
               <div className={styles.actions}>
                 <MobileShuffle />
                 <Export />
+                <button
+                  className={aboutStyles.triggerMobile}
+                  onClick={openAbout}
+                  aria-label="About"
+                >
+                  [?]
+                </button>
               </div>
             </div>
           </Panel>
@@ -54,6 +66,8 @@ function App() {
           <PaletteBar />
         </Panel>
       </footer>
+
+      <About open={aboutOpen} onClose={closeAbout} />
     </div>
     </PaletteProvider>
   )
