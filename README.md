@@ -2,6 +2,7 @@
   <img src="./public/logo.svg" alt="DIEZ" width="320" />
 </p>
 <p align="center"><em>colors → code → art</em></p>
+<p align="center"><a href="https://fcor.github.io/diez/"><strong>Try it →</strong></a></p>
 
 # Diez
 
@@ -10,7 +11,11 @@ on a generative canvas, copy it out as CSS / GLSL / p5.js.
 
 Named after [Carlos Cruz-Diez](https://en.wikipedia.org/wiki/Carlos_Cruz-Diez),
 the Venezuelan kinetic artist who spent his life on color interaction.
-His *Physichromies* are the reason this project exists.
+His *Physichromies* are the reason why this project exists.
+
+<p align="center">
+  <img src="./public/diez.gif" alt="Diez in action" width="800" />
+</p>
 
 ## What it does
 
